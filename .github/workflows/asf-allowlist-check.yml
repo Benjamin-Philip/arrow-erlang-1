@@ -23,8 +23,6 @@ on:
     paths:
       - ".github/**"
   push:
-    branches:
-      - main
     paths:
       - ".github/**"
 
