@@ -27,6 +27,9 @@ on:
 env:
   RUST_TOOLCHAIN_VERSION: stable
 
+permissions:
+  contents: read
+
 jobs:
   lint-rust:
     name: Lint Rust with Clippy
@@ -37,7 +40,9 @@ jobs:
           - native/arrow_format_nif/Cargo.toml
 
     steps:
-      - uses: actions/checkout@v7.0.0
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
 
       - uses: dtolnay/rust-toolchain@4be7066ada62dd38de10e7b70166bc74ed198c30 # stable
         with:
@@ -62,7 +67,9 @@ jobs:
           - native/arrow_format_nif/Cargo.toml
 
     steps:
-      - uses: actions/checkout@v7.0.0
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
 
       - uses: dtolnay/rust-toolchain@4be7066ada62dd38de10e7b70166bc74ed198c30 # stable
         with:
@@ -87,7 +94,9 @@ jobs:
           - native/arrow_format_nif/Cargo.toml
 
     steps:
-      - uses: actions/checkout@v7.0.0
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
 
       - uses: dtolnay/rust-toolchain@4be7066ada62dd38de10e7b70166bc74ed198c30 # stable
         with:
